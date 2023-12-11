@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#SBATCH -J vae_job
+#SBATCH -p gpu
+#SBATCH -o DCGAN_output_%j.txt
+#SBATCH -e DCGAN_error_%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=athshah@iu.edu
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=24
+#SBATCH --time=24:00:00
+#SBATCH --mem=150G
+#SBATCH -A r00160  # Update with your specific SLURM account
+
+# Load necessary modules
+module load python/gpu/3.10.10
+
+# Change to the directory where your Python program is located
+cd /N/u/athshah/BigRed200/DCGAN
+
+# Run your Python program
+srun python3 vae_project.py
+

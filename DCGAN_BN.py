@@ -66,7 +66,7 @@ def define_gan(g_model, d_model):
     return model
 
 # Load and prepare images from the dataset
-def load_real_samples(data_dir="/N/slate/athshah/SNOW_Breast_cancer/train"):
+def load_real_samples(data_dir="/N/slate/athshah/Breast_cancer/train"):
     trainX = []
     for i in os.listdir(data_dir):
         if str(i)[-3:] == "png":
@@ -129,7 +129,7 @@ def summarize_performance(epoch, g_model, d_model, dataset, latent_dim, acc_re, 
         g_model.save(filename)
 
 # Train the generator and discriminator
-def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=200, n_batch=50):
+def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=100, n_batch=50):
     acc_real_list, acc_fake_list = [], []
     bat_per_epo = int(dataset.shape[0] / n_batch)
     half_batch = int(n_batch / 2)

@@ -23,4 +23,4 @@ export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
 ## for resuming the training
 ## --snap decide when your model will be stored
 ## dataset needs to be zipped img files of square dimnesions or a dataset tool can be used to get it in shape.
-python stylegan3/train.py --outdir=training-runs --cfg=stylegan3-t --data=<path-to-dataset> --gpus=2 --batch=32 --gamma=8.2 --mirror=1 --workers=2 --snap=16 --gamma=8.2 --mirror=1 --workers=2 --snap=16
+python stylegan3/train.py --outdir=training-runs --cfg=stylegan3-t --data=<path-to-dataset> --gpus=2 --batch=32 --gamma=8.2 --mirror=1 --workers=2 --snap=16 

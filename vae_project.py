@@ -52,7 +52,6 @@ def load_image(img_path):
         print(f"Error loading image {img_path}: {e}")
         return None
     
-latent_dim = 500  # Set to the desired number of latent dimensions
 encoder_inputs = layers.Input(shape=(512, 512, 3))
 x = encoder_inputs
 x = tf.keras.layers.Conv2D(32, (5, 5), activation='relu', name='layer1')(x)
@@ -65,7 +64,7 @@ x = tf.keras.layers.Flatten(name='layer4')(x)
 z_mean = tf.keras.layers.Dense(latent_dim, name='z_mean')(x)
 z_log_var = tf.keras.layers.Dense(latent_dim, name='z_log_var')(x)
 
-# Sampling logic integrated into the model
+# Sampling logic integrated into the model (Atharva and subhranil)
 batch = tf.shape(z_mean)[0]
 dim = tf.shape(z_mean)[1]
 epsilon = K.random_normal(shape=(batch, dim))

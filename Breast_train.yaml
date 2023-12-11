@@ -1,5 +1,5 @@
-train: /N/slate/athshah/SNOW_Breast_cancer/train
-val: /N/slate/athshah/SNOW_Breast_cancer/test
-test: /N/slate/athshah/SNOW_Breast_cancer/test
+train: /N/slate/athshah/Breast_cancer/train
+val: /N/slate/athshah/Breast_cancer/test
+test: /N/slate/athshah/Breast_cancer/test
 nc: 1
 names: ["nucleus"]

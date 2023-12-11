@@ -23,12 +23,12 @@
 #  
 from ultralytics import YOLO
 import torch
-model = YOLO('yolov8m-seg.pt')
+model = YOLO('yolov8n.pt')
 device = '0' if torch.cuda.is_available() else 'cpu'
 results = model.train(
         batch=10,
         device=device,
         data='Breast_train.yaml',
-        epochs=1000,
+        epochs=30,
         single_cls = True
     )

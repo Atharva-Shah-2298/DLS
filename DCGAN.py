@@ -128,7 +128,7 @@ def define_gan(g_model, d_model):
 def load_real_samples():
     # load cifar10 dataset
     trainX = []
-    for i in os.listdir("/N/slate/athshah/SNOW_Breast_cancer/train"):
+    for i in os.listdir("/N/slate/athshah/Breast_cancer/train"):
         
         
         if str(i)[-3:] == "png":
@@ -224,7 +224,7 @@ def summarize_performance(epoch, g_model, d_model, dataset, latent_dim,acc_re,ac
 
 
 # train the generator and discriminator
-def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=200, n_batch=50):
+def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=100, n_batch=50):
     disc_real = []
     disc_fake = []
     bat_per_epo = int(dataset.shape[0] / n_batch)

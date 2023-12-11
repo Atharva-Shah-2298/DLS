@@ -29,7 +29,7 @@ import numpy as np
 from keras.preprocessing.image import ImageDataGenerator
 from keras.preprocessing import image
 # Define hyperparameters
-latent_dim = 500  # Set to the desired number of latent dimensions
+
 epochs = 100
 
 from PIL import Image
@@ -108,7 +108,7 @@ vae.compile(optimizer=tf.keras.optimizers.Adam(learning_rate = 0.0001))
 
 batch_size = 32
 epochs = 2
-folder_path = '/N/slate/athshah/SNOW_Breast_cancer/Image'
+folder_path = '/N/slate/athshah/Breast_cancer/Image'
 
 # Get the list of image files in the directory
 file_names = [file_name for file_name in os.listdir(folder_path) if ".ipynb_checkpoints" not in file_name]

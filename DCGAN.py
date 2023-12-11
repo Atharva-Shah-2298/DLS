@@ -133,7 +133,7 @@ def load_real_samples():
         
         if str(i)[-3:] == "png":
         
-            image = Image.open(f"/N/slate/athshah/SNOW_Breast_cancer/train/{i}") 
+            image = Image.open(f"/N/slate/athshah/Breast_cancer/train/{i}") 
 
 
             # Convert the resized image to a NumPy array
